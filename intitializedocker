@@ -11,3 +11,23 @@ from plantcv import plantcv as pcv
 print(pcv.__version__)
 
 pcv.crop()
+
+#Use DOCKER to run workflows. 
+#Open a terminal tab in Jupyter.
+
+jovyan@b972d0c0f97c:~$ for img in /home/directory/to/images/*.png ; do duckname=$(echo "$img" | cut -f 1 -d '.'); mkdir $duckname; cp $img $duckname; python /home/directory/to/workflow.py -i $img -o $duckname -r $duckname/results.json -w -D 'print'; done > /home/directory/to/results.txt
+
+# ^ Works best if you type out the whole directory for every file. Tedious but less errors. -r input MUST be .json file to work. 
+
+# Use my renaming bash script to rename all output images after their input image because all output images will be named the same across directories. See next note.  
+
+# The .json file will contain your data like surface area, convex hull area, and more.
+
+
+# If inputting 200 frames, you'll have 200 output images all named "16_median_blur.png" or something similar. You must run a script in bash that renames these to "frame0_16_median_blur.png" "frame1_16_median_blur.png" etc.
+
+$ mkdir medianblurs
+$ cp /directory/to/frame*_16_median_blur.png medianblurs
+$ cd medianblurs
+$ ls | sort -V
+# The commands above isolate and sort your new output files sequentially
