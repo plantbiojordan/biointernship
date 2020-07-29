@@ -1,0 +1,19 @@
+import codecs
+import json
+import csv
+import re
+import os
+
+files = []
+for file in os.listdir("/home/jordanmanchengo/data2/troubleshoot/jsons"):
+    if file.endswith(".json"):
+        files.append(os.path.join("/home/jordanmanchengo/data2/troubleshoot/jsons", file))
+print(files)
+for file in files:
+    with codecs.open(file,'r','utf-8') as f: 
+        tweets = json.load(f,encoding='utf-8')
+        print(tweets['observations']['area']['value'], tweets['observations']['area']['label'])
+
+
+# Output will be a list of every area value along with the workd "pixels". 
+# Remove "tweets['observations']['area']['label']" if you don't want the word "pixels" included.
