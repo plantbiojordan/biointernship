@@ -1,0 +1,25 @@
+# This is how I take an .mp4 time-lapse video and extract individual frames.
+
+import cv2
+import os
+
+vidcap = cv2.VideoCapture("/home/directory/to/timelapse.mp4")
+success, image = vidcap.read()
+count = 0
+while success:
+    cv2.imwrite("/home/directory/to/frame%d.png" % count, image)
+    success, image = vidcap.read()
+    print("Read a new frame: ", success)
+    count +=1
+    
+# The result should look like this:
+True
+True
+True
+True
+True
+True
+True
+True
+False
+# "True" if a frame was read and captured, "False" when there are no more frames to be captured. 
