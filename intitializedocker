@@ -1,0 +1,13 @@
+#HOW TO RUN A JUPYTER NOTEBOOK WITH PLANTCV ON THIS LAPTOP
+
+cd ~
+docker run --rm -p 8888:8888 -v "$PWD":/home/jordanmanchengo/data danforthcenter/plantcv
+
+#You’ll see a line in terminal that says “to access the notebook, copy and paste one of these two links into your browser” one of them will work, and will open a Jupiter notebook for you. 
+
+#Then you can create a new Jupiter python3 terminal, and start loading plantcv 
+
+from plantcv import plantcv as pcv
+print(pcv.__version__)
+
+pcv.crop()
