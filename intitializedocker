@@ -1,7 +1,7 @@
-#HOW TO RUN A JUPYTER NOTEBOOK WITH PLANTCV ON THIS LAPTOP
+#HOW TO OPEN A JUPYTER NOTEBOOK WITH PLANTCV
 
 cd ~
-docker run --rm -p 8888:8888 -v "$PWD":/home/jordanmanchengo/data danforthcenter/plantcv
+docker run --rm -p 8888:8888 -v "$PWD":/Users/jordanmanchego/duckdataws danforthcenter/plantcv
 
 #You’ll see a line in terminal that says “to access the notebook, copy and paste one of these two links into your browser” one of them will work, and will open a Jupiter notebook for you. 
 
