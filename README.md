@@ -10,4 +10,4 @@
 # 6. Use desktop terminal window (instead of the Jupyter notebook terminal tab) to copy your specific output images to a new directory (see intializedocker).
 # 7. Sort images sequentially in directory (see initializedocker).
 # 8. Copy and paste this sequential list into a .txt file, save in the directory you're in. 
-# 9. Using the dependency imagemagick in the desktop terminal window, run $ convert @number8.txt anyname.gif
+# 9. Using the dependency imagemagick in the desktop terminal window, run $ convert @step8.txt anyname.gif
