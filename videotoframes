@@ -13,6 +13,7 @@ while success:
     count +=1
     
 # The result should look like this:
+
 True
 True
 True
@@ -22,4 +23,7 @@ True
 True
 True
 False
+
 # "True" if a frame was read and captured, "False" when there are no more frames to be captured. 
+
+# If nothing happens, no frames are being read. Make sure your video is an .mp4 and in the correct location!
