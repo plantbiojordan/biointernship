@@ -1,4 +1,5 @@
 # This is how I take an .mp4 time-lapse video and extract individual frames.
+# MUST have opened docker WITHIN directory containing video for this to work. I forget this every single time.
 
 import cv2
 import os
