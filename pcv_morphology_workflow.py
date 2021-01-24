@@ -38,6 +38,7 @@ cv2.imwrite("/users/jordanmanchengo/data/duck1mask.png", s_mblur)
 # Reading in the mask image.
 mask, path, filename = pcv.readimage("/users/jordanmanchengo/data/duck1mask.png")
 
+# Should return "True" if successful.
 
 # In[12]:
 
